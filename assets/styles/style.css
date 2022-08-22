@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+/* ---------- Hamburger ---------- */
+#ham-menu {
+    display: none;
+    cursor: pointer;
+}
+
+#ham-menu .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+}
+
+/* ---------- Header ---------- */
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 9999;
+    height: 80px;
+    background-color: white;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+#nav-menu li {
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar #dark-button {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.navbar #dark-button:hover {
+    width: 35px;
+    height: 35px;
+}
+
+/* home */
+#home {
+    height: 50vh;
+    padding: 180px 40px 0 40px;
+    font-family: 'Aboreto', cursive;
+    position: relative;
+}
+
+#home h2 {
+    font-size: 6rem;
+}
+
+#home p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+
+/* ---------- Content ---------- */
+.content {
+    padding: 40px;
+}
+
+#paintings,
+#artists {
+    padding-top: 100px;
+}
+
+#paintings h1, 
+#artists h1 {
+    font-family: 'Aboreto', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* paintings */
+.lukisan {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.lukisan h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.lukisan .text {
+    padding: 0 40px;
+}
+
+.nighthawks,
+.liberty {
+    flex-direction: row-reverse;
+}
+
+.lukisan img {
+    padding: 10px;
+    background-color: black;
+    transition: all .6s ease;
+}
+
+.lukisan img:hover,
+.profile-img img:hover {
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.8);
+    transform: scale(1.1);
+}
+
+.monalisa-img,
+.girl-img {
+    flex-basis: 30%;
+}
+
+.monalisa-text,
+.girl-text {
+    flex-basis: 70%;
+}
+
+.starry-img,
+.nighthawks-img,
+.liberty-img,
+.mother-img {
+    flex-basis: 40%;
+}
+
+.starry-text,
+.nighthawks-text,
+.liberty-text,
+.mother-text {
+    flex-basis: 60%;
+}
+
+.monalisa img,
+.starry img,
+.girl img,
+.liberty img,
+.mother img {
+    height: 400px;
+}
+
+.nighthawks img {
+    height: 300px;
+}
+
+/* artists */
+.artist-column {
+    padding: 40px;
+}
+
+.row-satu,
+.row-dua {
+    display: flex;
+}
+
+.pelukis {
+    flex-basis: 33.33%;
+    padding: 20px;
+    text-align: center;
+    transition: all .6s ease;
+    border: 2px solid black;
+}
+
+.pelukis:hover {
+    transform: scale(1.04);
+    background-color: black;
+    color: white;
+}
+
+.pelukis img {
+    height: 200px;
+}
+
+.pelukis h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.pelukis table {
+    width: 100%;
+}
+
+
+/* ---------- Aside ---------- */
+/* profile */
+aside article {
+    padding: 40px;
+}
+
+.profile h2,
+.assets h2 {
+    font-family: 'Aboreto', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.profile-description {
+    display: flex;
+    padding: 40px;
+}
+
+.profile-img img {
+    height: 300px;
+    padding: 10px;
+    background-color: black;
+    transition: all .6s ease;
+}
+
+.profile-img {
+    flex-basis: 20%;
+}
+
+.profile-text {
+    flex-basis: 80%;
+    padding: 0 40px;
+}
+
+.profile-text h3 {
+    font-size: 2rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+}
+
+/* assets */
+.source {
+    padding: 40px 0;
+}
+
+.source-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    transition: all .3s ease;
+}
+
+.source-list:hover {
+    transform: scale(1.02);
+}
+
+.source-list p:nth-child(1) {
+    flex-basis: 5%;
+    font-weight: 700;
+}
+
+.source-list p:nth-child(2) {
+    flex-basis: 95%;
+}
+
+.source-list span {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/panah.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ---------- footer ---------- */
+footer {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* ---------- Laptop ---------- */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* ---------- Header ---------- */
+    /* navbar */
+    .navbar {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .navbar .logo {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+
+    #nav-menu {
+        width: 40%;
+    }
+
+    .navbar #dark-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar #dark-button:hover {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* home */
+    #home {
+        height: 30vh;
+        padding: 140px 20px 0 20px;
+    }
+
+    #home h2 {
+        font-size: 4rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    /* ---------- Content ---------- */
+    .content {
+        padding: 40px 20px;
+    }
+
+    #paintings,
+    #artists {
+        padding-top: 80px;
+    }
+
+    #paintings h1, 
+    #artists h1 {
+        font-size: 1.5rem;
+    }
+
+    /* paintings */
+    .lukisan {
+        padding: 20px;
+    }
+
+    .lukisan h3 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .lukisan .text {
+        padding: 0 20px;
+    }
+
+    .monalisa img,
+    .starry img,
+    .girl img,
+    .liberty img,
+    .mother img {
+        height: 250px;
+    }
+
+    .nighthawks img {
+        height: 200px;
+    }
+
+    /* artists */
+    .artist-column {
+        padding: 20px;
+    }
+
+    .pelukis {
+        padding: 20px;
+    }
+
+    .pelukis img {
+        height: 140px;
+    }
+
+    .pelukis h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    /* ---------- Aside ---------- */
+    /* profile */
+    aside article {
+        padding: 20px;
+    }
+
+    .profile h2,
+    .assets h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-description {
+        padding: 20px;
+    }
+
+    .profile-img img {
+        height: 180px;
+    }
+
+    .profile-text {
+        padding: 0 20px;
+    }
+
+    .profile-text h3 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    /* assets */
+    .source {
+        padding: 20px 0;
+    }
+
+    .source-list span {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+
+/* ---------- Tablet & Smartphone ---------- */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    /* ---------- Hamburger ---------- */
+    #ham-menu {
+        display: block;
+    }
+
+    #nav-menu {
+        position: fixed;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        left: -100%;
+        top: 60px;
+        transition: all .3s ease;
+    }
+
+    #nav-menu.active {
+        left: 0;
+    }
+
+    #nav-menu li {
+        margin: 20px 0;
+        font-size: 16px;
+        font-family: 'Aboreto', cursive;
+        font-weight: 600;
+    }
+
+    /* ---------- Header ---------- */
+    /* navbar */
+    .navbar {
+        padding: 0 10px;
+        height: 60px;
+    }
+
+    .navbar .logo {
+        font-size: 1.1rem;
+    }
+
+    .navbar #dark-button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar #dark-button:hover {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* home */
+    #home {
+        height: 40vh;
+        padding: 120px 10px 0 10px;
+        text-align: center;
+    }
+
+    #home h2 {
+        font-size: 4rem;
+    }
+
+    #home p {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    /* ---------- Content ---------- */
+    .content {
+        padding: 10px;
+    }
+
+    #paintings,
+    #artists {
+        padding-top: 70px;
+    }
+
+    #paintings h1, 
+    #artists h1 {
+        font-size: 1.2rem;
+    }
+
+    /* paintings */
+    .lukisan {
+        padding: 40px 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lukisan img {
+        padding: 6px;
+    }
+
+    .lukisan img:hover,
+    .profile-img img:hover {
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.8);
+        transform: scale(1.1);
+    }
+
+    .lukisan h3 {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .lukisan .text {
+        padding: 0 10px;
+    }
+
+    .monalisa img,
+    .starry img,
+    .girl img,
+    .liberty img,
+    .mother img {
+        height: 250px;
+    }
+
+    .nighthawks img {
+        height: 200px;
+    }
+
+    /* artists */
+    .artist-column {
+        padding: 40px 10px;
+    }
+
+    .row-satu,
+    .row-dua {
+        flex-direction: column;
+    }
+
+    .pelukis {
+        padding: 10px;
+    }
+
+    .pelukis img {
+        height: 140px;
+    }
+
+    .pelukis h3 {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    /* ---------- Aside ---------- */
+    /* profile */
+    aside article {
+        padding: 10px;
+    }
+
+    .profile h2,
+    .assets h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-description {
+        padding: 20px 10px;
+    }
+
+    .profile-img img {
+        padding: 6px;
+        height: 140px;
+    }
+
+    .profile-text {
+        padding: 0 10px;
+    }
+
+    .profile-text h3 {
+        font-size: 1.1rem;
+    }
+
+    /* assets */
+    .source {
+        padding: 20px 0;
+    }
+
+    .source-list span {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+
+/* ---------- dark theme ---------- */
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+.dark-theme #dark-button {
+    background-color: white;
+}
+
+.dark-theme .navbar {
+    background-color: black;
+}
+
+.dark-theme .navbar a {
+    color: white;
+}
+
+.dark-theme .lukisan img,
+.dark-theme .profile-img img {
+    background-color: white;
+}
+
+.dark-theme .lukisan img:hover,
+.dark-theme .profile-img img:hover {
+    box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .pelukis {
+    border: 2px solid white;
+}
+
+.dark-theme .pelukis:hover {
+    background-color: white;
+    color: black;
+}
+
+.dark-theme .profile-img img {
+    background-color: white;
+}
+
+.dark-theme .source-list {
+    border-bottom: 1px solid white;
+}
+
+.dark-theme .source-list span {
+    background-image: url('../images/panah2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-theme #nav-menu {
+    background-color: black;
+    color: white;
+}
+
+.dark-theme #ham-menu .line {
+    background-color: white;
+}
+
