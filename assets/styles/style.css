@@ -245,6 +245,7 @@ aside article {
     padding: 10px;
     background-color: black;
     transition: all .6s ease;
+    filter: grayscale(100%);
 }
 
 .profile-img {
