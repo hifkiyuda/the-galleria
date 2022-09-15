@@ -2,8 +2,8 @@
 
 Submission for **Dasar Pemrograman Web** class at Dicoding Indonesia
 
-- Built using html, css, and javascript
-- Using css flexbox to set the layout
-- Already applying semantic html
+- Built using HTML, CSS, and JavaScript
+- Using CSS Flexbox to set the layout
+- Already applying semantic HTML
 
-Click here to see it [The Galleria](https://hifkiyuda.github.io/the-galleria/).
+Click here to see it: [The Galleria](https://hifkiyuda.github.io/the-galleria/).
