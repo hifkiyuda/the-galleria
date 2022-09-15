@@ -1,6 +1,6 @@
 # The Galleria
 
-Submission for **Dasar Pemrograman Web** class at Dicoding Indonesia
+Submission for **Dasar Pemrograman Web** class at Dicoding
 
 - Built using HTML, CSS, and JavaScript
 - Using CSS Flexbox to set the layout
