@@ -1,10 +1,36 @@
 // dark mode
-const dark = document.querySelector('#dark-button');
+const darkModeKey = 'DARK-MODE';
 
-dark.addEventListener('click', function() {
+const darkMode = () => {
     document.querySelector('body').classList.toggle('dark-theme');
-});
+    localStorage.setItem(darkModeKey, 'dark');
+}
 
+const lightMode = () => {
+    document.querySelector('body').classList.remove('dark-theme');
+    localStorage.setItem(darkModeKey, 'light');
+}
+
+if (typeof(Storage) !== 'undefined') {
+    if (localStorage.getItem(darkModeKey) === null) {
+        localStorage.setItem(darkModeKey, 'light');
+    }
+
+    const button = document.querySelector('#dark-button');
+
+    if(localStorage.getItem(darkModeKey) === 'dark') {
+        darkMode();
+    }
+
+    button.addEventListener('click', function() {
+        const theme = localStorage.getItem(darkModeKey);
+        if(theme === 'light') {
+            darkMode();
+        }else {
+            lightMode();
+        }
+    });
+}
 
 // hamburger menu
 const hamburger = document.querySelector('#ham-menu');
