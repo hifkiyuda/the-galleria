@@ -236,11 +236,11 @@ aside article {
 }
 
 .profile-description {
-    display: flex;
+    /*display: flex;*/
     padding: 40px;
 }
 
-.profile-img img {
+/*.profile-img img {
     height: 300px;
     padding: 10px;
     background-color: black;
@@ -250,10 +250,9 @@ aside article {
 
 .profile-img {
     flex-basis: 20%;
-}
+}*/
 
 .profile-text {
-    flex-basis: 80%;
     padding: 0 40px;
 }
 
